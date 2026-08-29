@@ -1,0 +1,10 @@
+# Zugangsdaten - duerfen NIE ins Repository
+secrets.env
+*.key
+*.token
+
+# lokale Arbeitsdateien
+output/upload_log.json
+output/_*.png
+__pycache__/
+*.pyc

@@ -1,0 +1,930 @@
+[
+  {
+    "id": 1,
+    "filename": "design_0001.png",
+    "niche": "dog lover",
+    "text": "Dog mom since forever",
+    "style": "Minimalist White",
+    "suggested_title": "Dog mom since forever - Dog Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 2,
+    "filename": "design_0002.png",
+    "niche": "dog lover",
+    "text": "Dog mom since forever",
+    "style": "Modern Black",
+    "suggested_title": "Dog mom since forever - Dog Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 3,
+    "filename": "design_0003.png",
+    "niche": "dog lover",
+    "text": "Dog mom since forever",
+    "style": "Boho Beige",
+    "suggested_title": "Dog mom since forever - Dog Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 4,
+    "filename": "design_0004.png",
+    "niche": "dog lover",
+    "text": "Dog mom since forever",
+    "style": "Sage Botanical",
+    "suggested_title": "Dog mom since forever - Dog Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 5,
+    "filename": "design_0005.png",
+    "niche": "dog lover",
+    "text": "My dog is my therapist",
+    "style": "Minimalist White",
+    "suggested_title": "My dog is my therapist - Dog Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 6,
+    "filename": "design_0006.png",
+    "niche": "dog lover",
+    "text": "My dog is my therapist",
+    "style": "Modern Black",
+    "suggested_title": "My dog is my therapist - Dog Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 7,
+    "filename": "design_0007.png",
+    "niche": "dog lover",
+    "text": "My dog is my therapist",
+    "style": "Boho Beige",
+    "suggested_title": "My dog is my therapist - Dog Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 8,
+    "filename": "design_0008.png",
+    "niche": "dog lover",
+    "text": "My dog is my therapist",
+    "style": "Sage Botanical",
+    "suggested_title": "My dog is my therapist - Dog Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 9,
+    "filename": "design_0009.png",
+    "niche": "dog lover",
+    "text": "Life is better with a dog",
+    "style": "Minimalist White",
+    "suggested_title": "Life is better with a dog - Dog Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 10,
+    "filename": "design_0010.png",
+    "niche": "dog lover",
+    "text": "Life is better with a dog",
+    "style": "Modern Black",
+    "suggested_title": "Life is better with a dog - Dog Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 11,
+    "filename": "design_0011.png",
+    "niche": "dog lover",
+    "text": "Life is better with a dog",
+    "style": "Boho Beige",
+    "suggested_title": "Life is better with a dog - Dog Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 12,
+    "filename": "design_0012.png",
+    "niche": "dog lover",
+    "text": "Life is better with a dog",
+    "style": "Sage Botanical",
+    "suggested_title": "Life is better with a dog - Dog Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 13,
+    "filename": "design_0013.png",
+    "niche": "dog lover",
+    "text": "Professional dog mom",
+    "style": "Minimalist White",
+    "suggested_title": "Professional dog mom - Dog Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 14,
+    "filename": "design_0014.png",
+    "niche": "dog lover",
+    "text": "Professional dog mom",
+    "style": "Modern Black",
+    "suggested_title": "Professional dog mom - Dog Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 15,
+    "filename": "design_0015.png",
+    "niche": "dog lover",
+    "text": "Professional dog mom",
+    "style": "Boho Beige",
+    "suggested_title": "Professional dog mom - Dog Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 16,
+    "filename": "design_0016.png",
+    "niche": "dog lover",
+    "text": "Professional dog mom",
+    "style": "Sage Botanical",
+    "suggested_title": "Professional dog mom - Dog Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 17,
+    "filename": "design_0017.png",
+    "niche": "dog lover",
+    "text": "Rescue dog mama",
+    "style": "Minimalist White",
+    "suggested_title": "Rescue dog mama - Dog Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 18,
+    "filename": "design_0018.png",
+    "niche": "dog lover",
+    "text": "Rescue dog mama",
+    "style": "Modern Black",
+    "suggested_title": "Rescue dog mama - Dog Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 19,
+    "filename": "design_0019.png",
+    "niche": "dog lover",
+    "text": "Rescue dog mama",
+    "style": "Boho Beige",
+    "suggested_title": "Rescue dog mama - Dog Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 20,
+    "filename": "design_0020.png",
+    "niche": "dog lover",
+    "text": "Rescue dog mama",
+    "style": "Sage Botanical",
+    "suggested_title": "Rescue dog mama - Dog Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 21,
+    "filename": "design_0021.png",
+    "niche": "dog lover",
+    "text": "Not all heroes wear capes some wear collars",
+    "style": "Minimalist White",
+    "suggested_title": "Not all heroes wear capes some wear collars - Dog Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 22,
+    "filename": "design_0022.png",
+    "niche": "dog lover",
+    "text": "Not all heroes wear capes some wear collars",
+    "style": "Modern Black",
+    "suggested_title": "Not all heroes wear capes some wear collars - Dog Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 23,
+    "filename": "design_0023.png",
+    "niche": "dog lover",
+    "text": "Not all heroes wear capes some wear collars",
+    "style": "Boho Beige",
+    "suggested_title": "Not all heroes wear capes some wear collars - Dog Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 24,
+    "filename": "design_0024.png",
+    "niche": "dog lover",
+    "text": "Not all heroes wear capes some wear collars",
+    "style": "Sage Botanical",
+    "suggested_title": "Not all heroes wear capes some wear collars - Dog Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 25,
+    "filename": "design_0025.png",
+    "niche": "dog lover",
+    "text": "Sorry I can't I have a dog",
+    "style": "Minimalist White",
+    "suggested_title": "Sorry I can't I have a dog - Dog Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 26,
+    "filename": "design_0026.png",
+    "niche": "dog lover",
+    "text": "Sorry I can't I have a dog",
+    "style": "Modern Black",
+    "suggested_title": "Sorry I can't I have a dog - Dog Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 27,
+    "filename": "design_0027.png",
+    "niche": "dog lover",
+    "text": "Sorry I can't I have a dog",
+    "style": "Boho Beige",
+    "suggested_title": "Sorry I can't I have a dog - Dog Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 28,
+    "filename": "design_0028.png",
+    "niche": "dog lover",
+    "text": "Sorry I can't I have a dog",
+    "style": "Sage Botanical",
+    "suggested_title": "Sorry I can't I have a dog - Dog Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 29,
+    "filename": "design_0029.png",
+    "niche": "cat lover",
+    "text": "Cat mom club member",
+    "style": "Minimalist White",
+    "suggested_title": "Cat mom club member - Cat Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 30,
+    "filename": "design_0030.png",
+    "niche": "cat lover",
+    "text": "Cat mom club member",
+    "style": "Modern Black",
+    "suggested_title": "Cat mom club member - Cat Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 31,
+    "filename": "design_0031.png",
+    "niche": "cat lover",
+    "text": "Cat mom club member",
+    "style": "Boho Beige",
+    "suggested_title": "Cat mom club member - Cat Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 32,
+    "filename": "design_0032.png",
+    "niche": "cat lover",
+    "text": "Cat mom club member",
+    "style": "Sage Botanical",
+    "suggested_title": "Cat mom club member - Cat Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 33,
+    "filename": "design_0033.png",
+    "niche": "cat lover",
+    "text": "My cat runs this house",
+    "style": "Minimalist White",
+    "suggested_title": "My cat runs this house - Cat Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 34,
+    "filename": "design_0034.png",
+    "niche": "cat lover",
+    "text": "My cat runs this house",
+    "style": "Modern Black",
+    "suggested_title": "My cat runs this house - Cat Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 35,
+    "filename": "design_0035.png",
+    "niche": "cat lover",
+    "text": "My cat runs this house",
+    "style": "Boho Beige",
+    "suggested_title": "My cat runs this house - Cat Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 36,
+    "filename": "design_0036.png",
+    "niche": "cat lover",
+    "text": "My cat runs this house",
+    "style": "Sage Botanical",
+    "suggested_title": "My cat runs this house - Cat Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 37,
+    "filename": "design_0037.png",
+    "niche": "cat lover",
+    "text": "Life is better with a cat",
+    "style": "Minimalist White",
+    "suggested_title": "Life is better with a cat - Cat Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 38,
+    "filename": "design_0038.png",
+    "niche": "cat lover",
+    "text": "Life is better with a cat",
+    "style": "Modern Black",
+    "suggested_title": "Life is better with a cat - Cat Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 39,
+    "filename": "design_0039.png",
+    "niche": "cat lover",
+    "text": "Life is better with a cat",
+    "style": "Boho Beige",
+    "suggested_title": "Life is better with a cat - Cat Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 40,
+    "filename": "design_0040.png",
+    "niche": "cat lover",
+    "text": "Life is better with a cat",
+    "style": "Sage Botanical",
+    "suggested_title": "Life is better with a cat - Cat Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 41,
+    "filename": "design_0041.png",
+    "niche": "cat lover",
+    "text": "Professional cat mom",
+    "style": "Minimalist White",
+    "suggested_title": "Professional cat mom - Cat Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 42,
+    "filename": "design_0042.png",
+    "niche": "cat lover",
+    "text": "Professional cat mom",
+    "style": "Modern Black",
+    "suggested_title": "Professional cat mom - Cat Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 43,
+    "filename": "design_0043.png",
+    "niche": "cat lover",
+    "text": "Professional cat mom",
+    "style": "Boho Beige",
+    "suggested_title": "Professional cat mom - Cat Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 44,
+    "filename": "design_0044.png",
+    "niche": "cat lover",
+    "text": "Professional cat mom",
+    "style": "Sage Botanical",
+    "suggested_title": "Professional cat mom - Cat Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 45,
+    "filename": "design_0045.png",
+    "niche": "cat lover",
+    "text": "Rescue cat mama",
+    "style": "Minimalist White",
+    "suggested_title": "Rescue cat mama - Cat Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 46,
+    "filename": "design_0046.png",
+    "niche": "cat lover",
+    "text": "Rescue cat mama",
+    "style": "Modern Black",
+    "suggested_title": "Rescue cat mama - Cat Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 47,
+    "filename": "design_0047.png",
+    "niche": "cat lover",
+    "text": "Rescue cat mama",
+    "style": "Boho Beige",
+    "suggested_title": "Rescue cat mama - Cat Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 48,
+    "filename": "design_0048.png",
+    "niche": "cat lover",
+    "text": "Rescue cat mama",
+    "style": "Sage Botanical",
+    "suggested_title": "Rescue cat mama - Cat Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 49,
+    "filename": "design_0049.png",
+    "niche": "cat lover",
+    "text": "Ruled by a cat and loving it",
+    "style": "Minimalist White",
+    "suggested_title": "Ruled by a cat and loving it - Cat Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 50,
+    "filename": "design_0050.png",
+    "niche": "cat lover",
+    "text": "Ruled by a cat and loving it",
+    "style": "Modern Black",
+    "suggested_title": "Ruled by a cat and loving it - Cat Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 51,
+    "filename": "design_0051.png",
+    "niche": "cat lover",
+    "text": "Ruled by a cat and loving it",
+    "style": "Boho Beige",
+    "suggested_title": "Ruled by a cat and loving it - Cat Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 52,
+    "filename": "design_0052.png",
+    "niche": "cat lover",
+    "text": "Ruled by a cat and loving it",
+    "style": "Sage Botanical",
+    "suggested_title": "Ruled by a cat and loving it - Cat Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 53,
+    "filename": "design_0053.png",
+    "niche": "nurse",
+    "text": "Emergency room nurse and proud of it",
+    "style": "Minimalist White",
+    "suggested_title": "Emergency room nurse and proud of it - Nurse Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 54,
+    "filename": "design_0054.png",
+    "niche": "nurse",
+    "text": "Emergency room nurse and proud of it",
+    "style": "Modern Black",
+    "suggested_title": "Emergency room nurse and proud of it - Nurse Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 55,
+    "filename": "design_0055.png",
+    "niche": "nurse",
+    "text": "Emergency room nurse and proud of it",
+    "style": "Boho Beige",
+    "suggested_title": "Emergency room nurse and proud of it - Nurse Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 56,
+    "filename": "design_0056.png",
+    "niche": "nurse",
+    "text": "Emergency room nurse and proud of it",
+    "style": "Sage Botanical",
+    "suggested_title": "Emergency room nurse and proud of it - Nurse Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 57,
+    "filename": "design_0057.png",
+    "niche": "nurse",
+    "text": "Nurse life caffeine and compassion",
+    "style": "Minimalist White",
+    "suggested_title": "Nurse life caffeine and compassion - Nurse Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 58,
+    "filename": "design_0058.png",
+    "niche": "nurse",
+    "text": "Nurse life caffeine and compassion",
+    "style": "Modern Black",
+    "suggested_title": "Nurse life caffeine and compassion - Nurse Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 59,
+    "filename": "design_0059.png",
+    "niche": "nurse",
+    "text": "Nurse life caffeine and compassion",
+    "style": "Boho Beige",
+    "suggested_title": "Nurse life caffeine and compassion - Nurse Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 60,
+    "filename": "design_0060.png",
+    "niche": "nurse",
+    "text": "Nurse life caffeine and compassion",
+    "style": "Sage Botanical",
+    "suggested_title": "Nurse life caffeine and compassion - Nurse Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 61,
+    "filename": "design_0061.png",
+    "niche": "nurse",
+    "text": "Not all heroes wear capes some wear scrubs",
+    "style": "Minimalist White",
+    "suggested_title": "Not all heroes wear capes some wear scrubs - Nurse Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 62,
+    "filename": "design_0062.png",
+    "niche": "nurse",
+    "text": "Not all heroes wear capes some wear scrubs",
+    "style": "Modern Black",
+    "suggested_title": "Not all heroes wear capes some wear scrubs - Nurse Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 63,
+    "filename": "design_0063.png",
+    "niche": "nurse",
+    "text": "Not all heroes wear capes some wear scrubs",
+    "style": "Boho Beige",
+    "suggested_title": "Not all heroes wear capes some wear scrubs - Nurse Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 64,
+    "filename": "design_0064.png",
+    "niche": "nurse",
+    "text": "Not all heroes wear capes some wear scrubs",
+    "style": "Sage Botanical",
+    "suggested_title": "Not all heroes wear capes some wear scrubs - Nurse Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 65,
+    "filename": "design_0065.png",
+    "niche": "nurse",
+    "text": "Nurse mode activated",
+    "style": "Minimalist White",
+    "suggested_title": "Nurse mode activated - Nurse Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 66,
+    "filename": "design_0066.png",
+    "niche": "nurse",
+    "text": "Nurse mode activated",
+    "style": "Modern Black",
+    "suggested_title": "Nurse mode activated - Nurse Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 67,
+    "filename": "design_0067.png",
+    "niche": "nurse",
+    "text": "Nurse mode activated",
+    "style": "Boho Beige",
+    "suggested_title": "Nurse mode activated - Nurse Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 68,
+    "filename": "design_0068.png",
+    "niche": "nurse",
+    "text": "Nurse mode activated",
+    "style": "Sage Botanical",
+    "suggested_title": "Nurse mode activated - Nurse Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 69,
+    "filename": "design_0069.png",
+    "niche": "coffee lover",
+    "text": "But first coffee",
+    "style": "Minimalist White",
+    "suggested_title": "But first coffee - Coffee Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 70,
+    "filename": "design_0070.png",
+    "niche": "coffee lover",
+    "text": "But first coffee",
+    "style": "Modern Black",
+    "suggested_title": "But first coffee - Coffee Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 71,
+    "filename": "design_0071.png",
+    "niche": "coffee lover",
+    "text": "But first coffee",
+    "style": "Boho Beige",
+    "suggested_title": "But first coffee - Coffee Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 72,
+    "filename": "design_0072.png",
+    "niche": "coffee lover",
+    "text": "But first coffee",
+    "style": "Sage Botanical",
+    "suggested_title": "But first coffee - Coffee Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 73,
+    "filename": "design_0073.png",
+    "niche": "coffee lover",
+    "text": "Coffee then adulting",
+    "style": "Minimalist White",
+    "suggested_title": "Coffee then adulting - Coffee Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 74,
+    "filename": "design_0074.png",
+    "niche": "coffee lover",
+    "text": "Coffee then adulting",
+    "style": "Modern Black",
+    "suggested_title": "Coffee then adulting - Coffee Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 75,
+    "filename": "design_0075.png",
+    "niche": "coffee lover",
+    "text": "Coffee then adulting",
+    "style": "Boho Beige",
+    "suggested_title": "Coffee then adulting - Coffee Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 76,
+    "filename": "design_0076.png",
+    "niche": "coffee lover",
+    "text": "Coffee then adulting",
+    "style": "Sage Botanical",
+    "suggested_title": "Coffee then adulting - Coffee Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 77,
+    "filename": "design_0077.png",
+    "niche": "coffee lover",
+    "text": "Powered by coffee and chaos",
+    "style": "Minimalist White",
+    "suggested_title": "Powered by coffee and chaos - Coffee Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 78,
+    "filename": "design_0078.png",
+    "niche": "coffee lover",
+    "text": "Powered by coffee and chaos",
+    "style": "Modern Black",
+    "suggested_title": "Powered by coffee and chaos - Coffee Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 79,
+    "filename": "design_0079.png",
+    "niche": "coffee lover",
+    "text": "Powered by coffee and chaos",
+    "style": "Boho Beige",
+    "suggested_title": "Powered by coffee and chaos - Coffee Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 80,
+    "filename": "design_0080.png",
+    "niche": "coffee lover",
+    "text": "Powered by coffee and chaos",
+    "style": "Sage Botanical",
+    "suggested_title": "Powered by coffee and chaos - Coffee Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 81,
+    "filename": "design_0081.png",
+    "niche": "coffee lover",
+    "text": "Coffee is always a good idea",
+    "style": "Minimalist White",
+    "suggested_title": "Coffee is always a good idea - Coffee Lover Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 82,
+    "filename": "design_0082.png",
+    "niche": "coffee lover",
+    "text": "Coffee is always a good idea",
+    "style": "Modern Black",
+    "suggested_title": "Coffee is always a good idea - Coffee Lover Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 83,
+    "filename": "design_0083.png",
+    "niche": "coffee lover",
+    "text": "Coffee is always a good idea",
+    "style": "Boho Beige",
+    "suggested_title": "Coffee is always a good idea - Coffee Lover Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 84,
+    "filename": "design_0084.png",
+    "niche": "coffee lover",
+    "text": "Coffee is always a good idea",
+    "style": "Sage Botanical",
+    "suggested_title": "Coffee is always a good idea - Coffee Lover Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 85,
+    "filename": "design_0085.png",
+    "niche": "plant parent",
+    "text": "Plant mom since forever",
+    "style": "Minimalist White",
+    "suggested_title": "Plant mom since forever - Plant Parent Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 86,
+    "filename": "design_0086.png",
+    "niche": "plant parent",
+    "text": "Plant mom since forever",
+    "style": "Modern Black",
+    "suggested_title": "Plant mom since forever - Plant Parent Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 87,
+    "filename": "design_0087.png",
+    "niche": "plant parent",
+    "text": "Plant mom since forever",
+    "style": "Boho Beige",
+    "suggested_title": "Plant mom since forever - Plant Parent Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 88,
+    "filename": "design_0088.png",
+    "niche": "plant parent",
+    "text": "Plant mom since forever",
+    "style": "Sage Botanical",
+    "suggested_title": "Plant mom since forever - Plant Parent Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 89,
+    "filename": "design_0089.png",
+    "niche": "plant parent",
+    "text": "Talk to your plants they are listening",
+    "style": "Minimalist White",
+    "suggested_title": "Talk to your plants they are listening - Plant Parent Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 90,
+    "filename": "design_0090.png",
+    "niche": "plant parent",
+    "text": "Talk to your plants they are listening",
+    "style": "Modern Black",
+    "suggested_title": "Talk to your plants they are listening - Plant Parent Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 91,
+    "filename": "design_0091.png",
+    "niche": "plant parent",
+    "text": "Talk to your plants they are listening",
+    "style": "Boho Beige",
+    "suggested_title": "Talk to your plants they are listening - Plant Parent Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 92,
+    "filename": "design_0092.png",
+    "niche": "plant parent",
+    "text": "Talk to your plants they are listening",
+    "style": "Sage Botanical",
+    "suggested_title": "Talk to your plants they are listening - Plant Parent Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 93,
+    "filename": "design_0093.png",
+    "niche": "plant parent",
+    "text": "Green thumb in progress",
+    "style": "Minimalist White",
+    "suggested_title": "Green thumb in progress - Plant Parent Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 94,
+    "filename": "design_0094.png",
+    "niche": "plant parent",
+    "text": "Green thumb in progress",
+    "style": "Modern Black",
+    "suggested_title": "Green thumb in progress - Plant Parent Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 95,
+    "filename": "design_0095.png",
+    "niche": "plant parent",
+    "text": "Green thumb in progress",
+    "style": "Boho Beige",
+    "suggested_title": "Green thumb in progress - Plant Parent Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 96,
+    "filename": "design_0096.png",
+    "niche": "plant parent",
+    "text": "Green thumb in progress",
+    "style": "Sage Botanical",
+    "suggested_title": "Green thumb in progress - Plant Parent Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 97,
+    "filename": "design_0097.png",
+    "niche": "plant parent",
+    "text": "Plants make me happy you not so much",
+    "style": "Minimalist White",
+    "suggested_title": "Plants make me happy you not so much - Plant Parent Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 98,
+    "filename": "design_0098.png",
+    "niche": "plant parent",
+    "text": "Plants make me happy you not so much",
+    "style": "Modern Black",
+    "suggested_title": "Plants make me happy you not so much - Plant Parent Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 99,
+    "filename": "design_0099.png",
+    "niche": "plant parent",
+    "text": "Plants make me happy you not so much",
+    "style": "Boho Beige",
+    "suggested_title": "Plants make me happy you not so much - Plant Parent Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 100,
+    "filename": "design_0100.png",
+    "niche": "plant parent",
+    "text": "Plants make me happy you not so much",
+    "style": "Sage Botanical",
+    "suggested_title": "Plants make me happy you not so much - Plant Parent Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 101,
+    "filename": "design_0101.png",
+    "niche": "motivational",
+    "text": "Progress not perfection",
+    "style": "Minimalist White",
+    "suggested_title": "Progress not perfection - Motivational Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 102,
+    "filename": "design_0102.png",
+    "niche": "motivational",
+    "text": "Progress not perfection",
+    "style": "Modern Black",
+    "suggested_title": "Progress not perfection - Motivational Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 103,
+    "filename": "design_0103.png",
+    "niche": "motivational",
+    "text": "Progress not perfection",
+    "style": "Boho Beige",
+    "suggested_title": "Progress not perfection - Motivational Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 104,
+    "filename": "design_0104.png",
+    "niche": "motivational",
+    "text": "Progress not perfection",
+    "style": "Sage Botanical",
+    "suggested_title": "Progress not perfection - Motivational Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 105,
+    "filename": "design_0105.png",
+    "niche": "motivational",
+    "text": "Small steps still count",
+    "style": "Minimalist White",
+    "suggested_title": "Small steps still count - Motivational Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 106,
+    "filename": "design_0106.png",
+    "niche": "motivational",
+    "text": "Small steps still count",
+    "style": "Modern Black",
+    "suggested_title": "Small steps still count - Motivational Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 107,
+    "filename": "design_0107.png",
+    "niche": "motivational",
+    "text": "Small steps still count",
+    "style": "Boho Beige",
+    "suggested_title": "Small steps still count - Motivational Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 108,
+    "filename": "design_0108.png",
+    "niche": "motivational",
+    "text": "Small steps still count",
+    "style": "Sage Botanical",
+    "suggested_title": "Small steps still count - Motivational Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 109,
+    "filename": "design_0109.png",
+    "niche": "motivational",
+    "text": "Bloom where you are planted",
+    "style": "Minimalist White",
+    "suggested_title": "Bloom where you are planted - Motivational Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 110,
+    "filename": "design_0110.png",
+    "niche": "motivational",
+    "text": "Bloom where you are planted",
+    "style": "Modern Black",
+    "suggested_title": "Bloom where you are planted - Motivational Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 111,
+    "filename": "design_0111.png",
+    "niche": "motivational",
+    "text": "Bloom where you are planted",
+    "style": "Boho Beige",
+    "suggested_title": "Bloom where you are planted - Motivational Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 112,
+    "filename": "design_0112.png",
+    "niche": "motivational",
+    "text": "Bloom where you are planted",
+    "style": "Sage Botanical",
+    "suggested_title": "Bloom where you are planted - Motivational Wall Art Poster | Sage Botanical Typography Print"
+  },
+  {
+    "id": 113,
+    "filename": "design_0113.png",
+    "niche": "motivational",
+    "text": "Do it scared",
+    "style": "Minimalist White",
+    "suggested_title": "Do it scared - Motivational Wall Art Poster | Minimalist White Typography Print"
+  },
+  {
+    "id": 114,
+    "filename": "design_0114.png",
+    "niche": "motivational",
+    "text": "Do it scared",
+    "style": "Modern Black",
+    "suggested_title": "Do it scared - Motivational Wall Art Poster | Modern Black Typography Print"
+  },
+  {
+    "id": 115,
+    "filename": "design_0115.png",
+    "niche": "motivational",
+    "text": "Do it scared",
+    "style": "Boho Beige",
+    "suggested_title": "Do it scared - Motivational Wall Art Poster | Boho Beige Typography Print"
+  },
+  {
+    "id": 116,
+    "filename": "design_0116.png",
+    "niche": "motivational",
+    "text": "Do it scared",
+    "style": "Sage Botanical",
+    "suggested_title": "Do it scared - Motivational Wall Art Poster | Sage Botanical Typography Print"
+  }
+]
