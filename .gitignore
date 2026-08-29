@@ -6,5 +6,10 @@ secrets.env
 # lokale Arbeitsdateien
 output/upload_log.json
 output/_*.png
+
+# Erzeugte Bildmotive: Zwischenergebnis, nicht noetig fuer Printful.
+# Printful holt sich nur die fertig komponierten Designs. Neu erzeugen
+# mit  python motif_generator.py  (kostet rund 1,50 USD ueber fal.ai).
+output/motifs/
 __pycache__/
 *.pyc

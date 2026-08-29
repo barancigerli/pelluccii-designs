@@ -34,7 +34,7 @@ def slugify(text):
     return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", text.lower())).strip("-")
 
 
-def design_filename(niche_name, text, style_name):
+def design_filename(niche_name, text, style_name, motif=False):
     """Stabiler Dateiname aus Nische, Spruch und Stil.
 
     WICHTIG: Frueher waren die Dateien fortlaufend nummeriert
@@ -44,7 +44,10 @@ def design_filename(niche_name, text, style_name):
     anderes Motiv bekommen. Der Name haengt jetzt am Inhalt und
     aendert sich nicht mehr.
     """
-    return f"{slugify(niche_name)}_{slugify(text)}_{slugify(style_name)}.png"
+    # Bildbasierte Stile als JPG: PNG komprimiert Fotos praktisch nicht und
+    # blaeht das Repository auf mehrere Gigabyte auf.
+    ext = "jpg" if motif else "png"
+    return f"{slugify(niche_name)}_{slugify(text)}_{slugify(style_name)}.{ext}"
 
 
 def load_font(spec, size):
@@ -167,7 +170,34 @@ def create_design(text, niche_name, style, canvas_size, personal_line=None):
     vorgetaeuschten.
     """
     width, height = canvas_size
-    img = Image.new("RGB", canvas_size, style["bg"])
+
+    # Stile mit "motif" legen die Typografie ueber ein erzeugtes Bild.
+    # Fehlt das Bild, faellt der Stil auf die Hintergrundfarbe zurueck,
+    # damit ein fehlendes Motiv nicht den ganzen Lauf abbricht.
+    motif_path = None
+    if style.get("motif"):
+        candidate = os.path.join(config.OUTPUT_DIR, "motifs", f"{slugify(niche_name)}.jpg")
+        if os.path.exists(candidate):
+            motif_path = candidate
+
+    band_h = int(height * style.get("band_ratio", 0.30))
+
+    if motif_path:
+        # Klassischer Reiseplakat-Aufbau: Bild oben, farbiges Textfeld unten.
+        # Das ist nicht nur Optik - der Text bleibt so IMMER lesbar, egal wie
+        # unruhig das Motiv ausfaellt, und das Feld verdeckt den unteren
+        # Bildrand, wo Bildmodelle gern erfundene Signaturen hinsetzen.
+        img = Image.new("RGB", canvas_size, style["bg"])
+        motif = Image.open(motif_path).convert("RGB")
+        target = (width, height - band_h)
+        scale = max(target[0] / motif.width, target[1] / motif.height)
+        motif = motif.resize((int(motif.width * scale), int(motif.height * scale)), Image.LANCZOS)
+        left = (motif.width - target[0]) // 2
+        # Oberen Bildausschnitt bevorzugen: unten sitzen die Artefakte.
+        motif = motif.crop((left, 0, left + target[0], target[1]))
+        img.paste(motif, (0, 0))
+    else:
+        img = Image.new("RGB", canvas_size, style["bg"])
     draw = ImageDraw.Draw(img)
 
     fg = style["fg"]
@@ -191,7 +221,9 @@ def create_design(text, niche_name, style, canvas_size, personal_line=None):
     eyebrow_font = load_font(style["eyebrow"], eyebrow_size)
     eyebrow_tracking = eyebrow_size * 0.32
     eyebrow_w = tracked_width(draw, eyebrow_text, eyebrow_font, eyebrow_tracking)
-    eyebrow_y = int(height * 0.150)
+    band_zone = style.get("text_zone") == "band"
+    band_top = height - band_h
+    eyebrow_y = int(band_top + band_h * 0.16) if band_zone else int(height * 0.150)
     draw_tracked(
         draw,
         ((width - eyebrow_w) / 2, eyebrow_y),
@@ -202,7 +234,7 @@ def create_design(text, niche_name, style, canvas_size, personal_line=None):
     )
 
     # --- kurze Trennlinie unter dem Eyebrow ---
-    rule_y = eyebrow_y + int(eyebrow_size * 2.4)
+    rule_y = eyebrow_y + int(eyebrow_size * (1.9 if band_zone else 2.4))
     rule_half = int(width * 0.045)
     rule_w = max(2, int(width * 0.0016))
     draw.line(
@@ -214,7 +246,7 @@ def create_design(text, niche_name, style, canvas_size, personal_line=None):
     # --- Hauptspruch ---
     main_text = text.upper() if style["upper"] else text
     max_text_width = width - 2 * int(width * 0.155)
-    max_text_height = height * 0.44
+    max_text_height = band_h * 0.46 if band_zone else height * 0.44
     font, lines, size, tracking_px, line_height = fit_main_text(
         draw,
         main_text,
@@ -222,13 +254,13 @@ def create_design(text, niche_name, style, canvas_size, personal_line=None):
         style["tracking"],
         max_text_width,
         max_text_height,
-        start_size=int(width * 0.165),
+        start_size=int(width * (0.098 if band_zone else 0.165)),
     )
 
     block_height = line_height * len(lines)
     # Optische Mitte liegt leicht ueber der geometrischen - sonst wirkt
     # das Poster kopflastig, wenn es spaeter gerahmt an der Wand haengt.
-    y = height * 0.545 - block_height / 2
+    y = (band_top + band_h * 0.58 if band_zone else height * 0.545) - block_height / 2
 
     for line in lines:
         line_w = tracked_width(draw, line, font, tracking_px)
@@ -236,13 +268,16 @@ def create_design(text, niche_name, style, canvas_size, personal_line=None):
         y += line_height
 
     # --- Akzentlinie unten ---
-    bottom_y = int(height * 0.845)
+    # Bei Motiv-Stilen sitzt der Text oben; eine Linie unten wuerde
+    # mitten ins Bild schneiden.
+    bottom_y = int(band_top + band_h * 0.90) if band_zone else int(height * 0.845)
     bottom_half = int(width * 0.075)
-    draw.line(
-        [(width / 2 - bottom_half, bottom_y), (width / 2 + bottom_half, bottom_y)],
-        fill=accent,
-        width=rule_w,
-    )
+    if not band_zone:
+        draw.line(
+            [(width / 2 - bottom_half, bottom_y), (width / 2 + bottom_half, bottom_y)],
+            fill=accent,
+            width=rule_w,
+        )
 
     # --- Personalisierung ---
     if personal_line:
@@ -251,9 +286,10 @@ def create_design(text, niche_name, style, canvas_size, personal_line=None):
         p_track = p_size * 0.18
         p_text = personal_line.strip()
         p_w = tracked_width(draw, p_text, p_font, p_track)
+        p_y = (band_top + band_h * 0.84) if band_zone else (bottom_y + int(p_size * 1.1))
         draw_tracked(
             draw,
-            ((width - p_w) / 2, bottom_y + int(p_size * 1.1)),
+            ((width - p_w) / 2, p_y),
             p_text,
             p_font,
             fg,
@@ -271,8 +307,14 @@ def generate_all_designs():
     counter = 1
 
     for niche_name, texts in config.NICHES.items():
-        for text in texts:
+        for text_index, text in enumerate(texts):
             for style in config.STYLES:
+                # Bildbasierte Stile sind gross (mehrere MB pro Datei) und
+                # brauchen ein passendes Motiv. Deshalb bekommen sie nur die
+                # ersten Sprueche einer Nische, nicht jeden einzelnen.
+                limit = style.get("max_per_niche")
+                if limit is not None and text_index >= limit:
+                    continue
                 img = create_design(
                     text=text,
                     niche_name=niche_name,
@@ -280,10 +322,15 @@ def generate_all_designs():
                     canvas_size=config.CANVAS_SIZE,
                 )
 
-                filename = design_filename(niche_name, text, style["name"])
+                is_motif = bool(style.get("motif"))
+                filename = design_filename(niche_name, text, style["name"], motif=is_motif)
                 # dpi-Angabe mitspeichern, damit Druckdienste die physische
                 # Groesse direkt aus der Datei lesen koennen.
-                img.save(os.path.join(config.OUTPUT_DIR, filename), "PNG", dpi=(300, 300))
+                target = os.path.join(config.OUTPUT_DIR, filename)
+                if is_motif:
+                    img.save(target, "JPEG", quality=82, dpi=(300, 300), optimize=True)
+                else:
+                    img.save(target, "PNG", dpi=(300, 300))
 
                 manifest.append({
                     "id": counter,

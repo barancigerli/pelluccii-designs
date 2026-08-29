@@ -181,6 +181,23 @@ STYLES = [
         "tracking": 0.0,
     },
     {
+        # Typografie ueber einem erzeugten Bildmotiv (siehe motif_generator).
+        # Text sitzt oben in der ruhigen Flaeche, die der Prompt freihaelt.
+        "name": "Vintage Poster",
+        "bg": (243, 233, 214),
+        "fg": (58, 34, 24),
+        "accent": (92, 58, 38),
+        "main": (PLAYFAIR, "Bold"),
+        "eyebrow": (MONTSERRAT, "Medium"),
+        "upper": False,
+        "border": False,
+        "motif": True,
+        "max_per_niche": 2,
+        "text_zone": "band",
+        "band_ratio": 0.30,
+        "tracking": 0.0,
+    },
+    {
         "name": "Sage Botanical",
         "bg": (223, 229, 218),
         "fg": (52, 71, 54),
