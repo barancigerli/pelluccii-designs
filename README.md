@@ -14,7 +14,7 @@
 | Printful-Store | Pelluccii (Etsy), ID `18676949` |
 | Produkt | Enhanced Matte Paper Poster (in), Product-ID 1 |
 | Groesse | 18" x 24", Variant-ID `1`, Einkauf $13.75 |
-| Verkaufspreis | $31.99 (`RETAIL_PRICE` in `printful_upload.py`) |
+| Verkaufspreis | 29,50 EUR (`RETAIL_PRICE`) - Etsy zeigt DE-Besuchern 35,09 EUR inkl. MwSt |
 | Designs | 116 Stueck = 6 Nischen x 29 Sprueche x 4 Stile |
 | Aufloesung | 5400 x 7200 px, 300 DPI |
 | Schriften | Google Fonts (OFL), lokal in `fonts/` |
@@ -96,20 +96,20 @@ python -c "from printful_upload import find_poster_variants; find_poster_variant
 
 ## Kalkulation
 
-Bei 18"x24" und $31.99 Verkaufspreis:
+Bei 18"x24" und 29,50 EUR Verkaufspreis (Stand: die drei Test-Listings):
 
 | Posten | Betrag |
 |---|---|
-| Verkaufspreis | $31.99 |
-| Printful Einkauf | -$13.75 |
-| Etsy Listing | -$0.20 |
-| Etsy Transaktion (6,5%) | -$2.08 |
-| Zahlungsabwicklung (ca. 3% + $0.25) | -$1.21 |
-| **Gewinn pro Verkauf** | **ca. $14.75** |
+| Verkaufspreis | 29,50 EUR |
+| Printful Einkauf | -11,87 EUR |
+| Etsy Listing | -0,17 EUR |
+| Etsy Transaktion (6,5%) | -1,92 EUR |
+| Zahlungsabwicklung (ca. 3% + 0,25) | -1,14 EUR |
+| **Gewinn pro Verkauf** | **ca. 14,40 EUR** |
 
-Versand ist hier nicht eingerechnet - je nach Einstellung zahlt ihn der Kaeufer
-oder er geht von der Marge ab. Prozentsaetze sind Naeherungen und je nach
-Etsy-Programm (z.B. Offsite Ads) hoeher.
+Versand ist nicht eingerechnet - aktuell zahlt ihn der Kaeufer (5,95 EUR).
+Prozentsaetze sind Naeherungen und je nach Etsy-Programm (z.B. Offsite Ads)
+hoeher. Zur Umsatzsteuer siehe Hinweise unten.
 
 ## Wichtige Hinweise
 
@@ -121,6 +121,17 @@ Etsy-Programm (z.B. Offsite Ads) hoeher.
   License (Lizenztexte liegen daneben) und duerfen kommerziell genutzt werden,
   auch fuer verkaufte Druckerzeugnisse. Bei eigenen Fonts immer die Lizenz
   pruefen - Windows-Systemfonts wie Arial sind dafuer nicht freigegeben.
+- **Umsatzsteuer**: Etsy weist deutschen Besuchern 19% MwSt aus (29,50 -> 35,09).
+  Wer die Kleinunternehmerregelung (Paragraf 19 UStG) nutzen will, darf keine
+  Umsatzsteuer ausweisen. Das gehoert mit einem Steuerberater geklaert, bevor
+  Verkaeufe laufen.
+- **Versandherkunft**: In den Printful-Store-Einstellungen steht Charlotte, NC.
+  Das Listing zeigt deshalb "Versand aus USA". Bewusst so gewaehlt, weil der
+  Hauptmarkt die USA ist. Fuer EU-Kaeufer bedeutet es lange Lieferzeiten.
+- **Produkte anlegen**: Printfuls API kann fuer Etsy-verbundene Stores KEINE
+  Produkte anlegen (bestaetigt: /store/products gilt nur fuer "Manual Order /
+  API"-Stores). Das Anlegen laeuft ueber das Printful-Dashboard. Automatisierbar
+  bleiben Design-Erzeugung, Hosting und die Datei-Anmeldung per API.
 - **Duplikate**: Jeder Listing-Titel enthaelt den Stilnamen und ist dadurch
   eindeutig. Ohne das entstuenden pro Spruch mehrere identische Listings, was
   Etsy abstraft.

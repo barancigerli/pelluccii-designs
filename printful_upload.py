@@ -57,10 +57,17 @@ STORE_ID = os.environ.get("PRINTFUL_STORE_ID") or _SECRETS.get("PRINTFUL_STORE_I
 # (z.B. 30x40cm, 40x50cm, 50x70cm) - jede hat eine eigene Variant-ID.
 CATALOG_VARIANT_ID = getattr(config, "CATALOG_VARIANT_ID", None)
 
-# Verkaufspreis in EUR/USD (Shop-Waehrung) - bei Postern realistisch 15-25
-RETAIL_PRICE = "31.99"
+# Verkaufspreis in der Shop-Waehrung. Der Etsy-Shop rechnet in EUR:
+# 29.50 EUR entspricht rund $31.99. Etsy zeigt deutschen Besuchern
+# zusaetzlich 19% MwSt, also 35.09 EUR.
+RETAIL_PRICE = "29.50"
 
 BASE_URL = "https://api.printful.com"
+
+# Oeffentlicher Ort der Design-Dateien. Printful holt sich die Bilder von hier,
+# ein direkter Upload ist ueber die API nicht moeglich. Wert kommt aus
+# secrets.env (PUBLIC_BASE_URL), damit Nutzername/Repo nicht im Code stehen.
+PUBLIC_BASE_URL = os.environ.get("PUBLIC_BASE_URL") or _SECRETS.get("PUBLIC_BASE_URL", "")
 
 # Auf True stellen fuer echten Live-Betrieb. Solange False: nur Simulation/Ausgabe.
 DRY_RUN = True
@@ -124,19 +131,35 @@ def find_poster_variants(keyword="poster"):
     return matches
 
 
+def design_url(filename):
+    """Baut die oeffentliche URL einer Design-Datei.
+
+    Printfuls API nimmt KEINE Datei-Uploads entgegen - weder v1 noch v2
+    akzeptieren Binaerdaten. Beide erwarten eine oeffentlich erreichbare
+    URL, die Printful dann selbst abruft. Deshalb liegen die Designs in
+    einem oeffentlichen GitHub-Repository und werden von dort verlinkt.
+    """
+    return f"{PUBLIC_BASE_URL.rstrip('/')}/{filename}"
+
+
 def upload_design_file(image_path):
     """
-    Laedt eine lokale Design-Datei zu Printful hoch und gibt die File-ID zurueck,
-    die dann beim Produkt-Erstellen referenziert wird.
+    Meldet eine Design-Datei bei Printful an und gibt die File-ID zurueck,
+    die dann beim Produkt-Erstellen referenziert wird. Printful laedt die
+    Datei anhand der uebergebenen URL selbst herunter.
     """
+    filename = os.path.basename(image_path)
+    url = design_url(filename)
+
     if DRY_RUN:
-        print(f"  [DRY RUN] Wuerde Datei hochladen: {image_path}")
+        print(f"  [DRY RUN] Wuerde Datei anmelden: {url}")
         return "dry_run_file_id"
 
-    with open(image_path, "rb") as f:
-        files = {"file": f}
-        headers = {"Authorization": f"Bearer {PRINTFUL_API_KEY}"}
-        resp = requests.post(f"{BASE_URL}/files", headers=headers, files=files)
+    resp = requests.post(
+        f"{BASE_URL}/files",
+        headers=get_headers(),
+        json={"type": "default", "url": url},
+    )
     resp.raise_for_status()
     return resp.json()["result"]["id"]
 
@@ -190,6 +213,12 @@ def process_manifest(manifest_path="output/manifest.json", limit=None, ids=None)
            besser als limit, weil man damit gezielt verschiedene Nischen
            und Stile auswaehlen kann statt dreimal denselben Spruch.
     """
+    if not DRY_RUN and not PUBLIC_BASE_URL:
+        raise ValueError(
+            "PUBLIC_BASE_URL ist nicht gesetzt. Printful kann die Designs nur "
+            "von einer oeffentlichen URL abholen - trag sie in secrets.env ein."
+        )
+
     with open(manifest_path, "r", encoding="utf-8") as f:
         manifest = json.load(f)
 
@@ -215,8 +244,19 @@ def process_manifest(manifest_path="output/manifest.json", limit=None, ids=None)
                 time.sleep(2)
 
         except requests.exceptions.RequestException as e:
-            print(f"  FEHLER bei Design {entry['id']}: {e}")
-            results.append({"design_id": entry["id"], "status": "error", "error": str(e)})
+            # Printful packt den eigentlichen Grund in den Response-Body.
+            # Ohne diese Ausgabe sieht man nur "400 Bad Request" und raet.
+            detail = ""
+            resp = getattr(e, "response", None)
+            if resp is not None:
+                detail = f" | {resp.text[:300]}"
+            print(f"  FEHLER bei Design {entry['id']}: {e}{detail}")
+            results.append({
+                "design_id": entry["id"],
+                "status": "error",
+                "error": str(e),
+                "detail": detail.strip(" |"),
+            })
 
     # Ergebnis-Log speichern, um zu tracken was schon hochgeladen wurde
     log_path = os.path.join("output", "upload_log.json")
