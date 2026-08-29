@@ -49,6 +49,63 @@ NICHES = {
         "Green thumb in progress",
         "Plants make me happy you not so much",
     ],
+    # Bewusst kulturell gehalten - Familie, Feste, Alltag. Keine politischen
+    # Aussagen, keine Flaggen, keine Gebietsansprueche: verkauft besser und
+    # haelt den Shop aus jeder Diskussion raus.
+    "kurdish heritage": [
+        "Newroz Piroz Be",
+        "Raised on strong tea and long stories",
+        "My grandmother's carpet my grandmother's rules",
+        "Tea first then we talk",
+        "Daughter of the mountains",
+        "Every carpet tells a story",
+    ],
+    # ---- HERKUNFT / HERITAGE ----
+    # Bewusst als Kultur formuliert, nicht als Staat: "heritage" statt Flagge
+    # oder Gebietsanspruch. Zielgruppe ist die Diaspora in den USA, wo diese
+    # Poster als Geschenk an Eltern und Grosseltern gehen.
+    # ACHTUNG: Die fremdsprachigen Zeilen bitte einmal von jemandem
+    # gegenlesen lassen, der die Sprache spricht.
+    "irish heritage": [
+        "Slainte",
+        "Irish by blood loud by choice",
+    ],
+    "italian heritage": [
+        "Ciao bella",
+        "Everything tastes better at nonna's",
+    ],
+    "mexican heritage": [
+        "Mi casa es tu casa",
+        "Raised on abuela's recipes",
+    ],
+    "greek heritage": [
+        "Opa",
+        "My yiayia's kitchen my yiayia's rules",
+    ],
+    "polish heritage": [
+        "Na zdrowie",
+        "Babcia knows best",
+    ],
+    "portuguese heritage": [
+        "Saudade",
+        "Raised on avo's bread and long summers",
+    ],
+    "nigerian heritage": [
+        "Jollof and good company",
+        "Raised on mama's prayers",
+    ],
+    "filipino heritage": [
+        "Mabuhay",
+        "Lola's rules are house rules",
+    ],
+    "armenian heritage": [
+        "Tatik's rules are the only rules",
+        "Coffee grounds never lie",
+    ],
+    "german heritage": [
+        "Prost",
+        "Raised on Oma's Sunday table",
+    ],
     "motivational": [
         "Progress not perfection",
         "Small steps still count",
@@ -105,6 +162,22 @@ STYLES = [
         "eyebrow": (MONTSERRAT, "Medium"),
         "upper": False,
         "border": True,
+        "tracking": 0.0,
+    },
+    {
+        # Bordüre wird als Kelim-Muster gezeichnet (siehe design_generator).
+        # Farben nach klassischer Teppich-Palette: Krapprot, Indigo, Ocker
+        # auf gealtertem Papier.
+        "name": "Vintage Kilim",
+        "bg": (238, 228, 208),
+        "fg": (108, 42, 38),
+        "accent": (154, 106, 58),
+        "main": (PLAYFAIR, "Bold"),
+        "eyebrow": (MONTSERRAT, "Medium"),
+        "upper": False,
+        "border": False,
+        "pattern": "kilim",
+        "pattern_colors": [(140, 46, 42), (46, 62, 92), (186, 138, 70)],
         "tracking": 0.0,
     },
     {

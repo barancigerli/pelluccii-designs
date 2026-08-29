@@ -22,10 +22,29 @@ Ergebnis:
 
 import json
 import os
+import re
 
 from PIL import Image, ImageDraw, ImageFont
 
 import config
+
+
+def slugify(text):
+    """Macht aus einem Text einen dateinamentauglichen Baustein."""
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", text.lower())).strip("-")
+
+
+def design_filename(niche_name, text, style_name):
+    """Stabiler Dateiname aus Nische, Spruch und Stil.
+
+    WICHTIG: Frueher waren die Dateien fortlaufend nummeriert
+    (design_0001.png). Sobald eine Nische oder ein Stil dazukam,
+    verschob sich die Nummerierung - und weil Printful die Designs
+    per URL referenziert, haetten bestehende Listings still ein
+    anderes Motiv bekommen. Der Name haengt jetzt am Inhalt und
+    aendert sich nicht mehr.
+    """
+    return f"{slugify(niche_name)}_{slugify(text)}_{slugify(style_name)}.png"
 
 
 def load_font(spec, size):
@@ -96,8 +115,57 @@ def fit_main_text(draw, text, spec, tracking_ratio, max_width, max_height, start
     return font, [text], size, size * tracking_ratio, size * 1.16
 
 
-def create_design(text, niche_name, style, canvas_size):
-    """Rendert ein einzelnes Poster und gibt es als PIL Image zurueck."""
+def draw_kilim_border(draw, width, height, colors):
+    """Zeichnet eine Bordüre aus wiederholten Rauten- und Zackenmotiven,
+    wie man sie von Kelim-Teppichen kennt. Rein geometrisch aufgebaut,
+    also kein fremdes Bildmaterial und keine Lizenzfrage.
+
+    colors: drei RGB-Tupel, die sich im Motiv abwechseln.
+    """
+    inset = int(width * 0.048)
+    band = int(width * 0.042)
+    outer = [inset, inset, width - inset, height - inset]
+
+    # Grundband
+    draw.rectangle(outer, outline=colors[0], width=max(2, int(width * 0.004)))
+    inner = [inset + band, inset + band, width - inset - band, height - inset - band]
+    draw.rectangle(inner, outline=colors[0], width=max(2, int(width * 0.003)))
+
+    # Rautenkette entlang der vier Seiten. Die Schrittweite wird so gewaehlt,
+    # dass die Motive an den Ecken sauber aufgehen statt abgeschnitten zu werden.
+    size = band * 0.62
+    mid = band / 2.0
+
+    def diamond(cx, cy, r, fill):
+        draw.polygon([(cx, cy - r), (cx + r, cy), (cx, cy + r), (cx - r, cy)], fill=fill)
+
+    span_x = inner[2] - inner[0]
+    count_x = max(3, int(span_x / (size * 2.1)))
+    step_x = span_x / count_x
+    for i in range(count_x + 1):
+        cx = inner[0] + i * step_x
+        c = colors[i % len(colors)]
+        diamond(cx, inset + mid, size * 0.5, c)
+        diamond(cx, height - inset - mid, size * 0.5, colors[(i + 1) % len(colors)])
+
+    span_y = inner[3] - inner[1]
+    count_y = max(3, int(span_y / (size * 2.1)))
+    step_y = span_y / count_y
+    for i in range(count_y + 1):
+        cy = inner[1] + i * step_y
+        c = colors[i % len(colors)]
+        diamond(inset + mid, cy, size * 0.5, c)
+        diamond(width - inset - mid, cy, size * 0.5, colors[(i + 1) % len(colors)])
+
+
+def create_design(text, niche_name, style, canvas_size, personal_line=None):
+    """Rendert ein einzelnes Poster und gibt es als PIL Image zurueck.
+
+    personal_line: optionaler Text, den der Kaeufer bei der Bestellung
+    angibt (Name, Datum). Steht er drin, wird er unten mitgedruckt - das
+    macht das Poster zu echter Einzelanfertigung, nicht zu einer
+    vorgetaeuschten.
+    """
     width, height = canvas_size
     img = Image.new("RGB", canvas_size, style["bg"])
     draw = ImageDraw.Draw(img)
@@ -105,7 +173,9 @@ def create_design(text, niche_name, style, canvas_size):
     fg = style["fg"]
     accent = style["accent"]
 
-    # --- Innenrahmen ---
+    # --- Bordüre ---
+    if style.get("pattern") == "kilim":
+        draw_kilim_border(draw, width, height, style["pattern_colors"])
     if style["border"]:
         inset = int(width * 0.055)
         line_w = max(2, int(width * 0.0018))
@@ -174,6 +244,22 @@ def create_design(text, niche_name, style, canvas_size):
         width=rule_w,
     )
 
+    # --- Personalisierung ---
+    if personal_line:
+        p_size = int(width * 0.030)
+        p_font = load_font(style["eyebrow"], p_size)
+        p_track = p_size * 0.18
+        p_text = personal_line.strip()
+        p_w = tracked_width(draw, p_text, p_font, p_track)
+        draw_tracked(
+            draw,
+            ((width - p_w) / 2, bottom_y + int(p_size * 1.1)),
+            p_text,
+            p_font,
+            fg,
+            p_track,
+        )
+
     return img
 
 
@@ -194,7 +280,7 @@ def generate_all_designs():
                     canvas_size=config.CANVAS_SIZE,
                 )
 
-                filename = f"design_{counter:04d}.png"
+                filename = design_filename(niche_name, text, style["name"])
                 # dpi-Angabe mitspeichern, damit Druckdienste die physische
                 # Groesse direkt aus der Datei lesen koennen.
                 img.save(os.path.join(config.OUTPUT_DIR, filename), "PNG", dpi=(300, 300))
