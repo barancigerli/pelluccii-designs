@@ -67,7 +67,7 @@ NICHES = {
     # ACHTUNG: Die fremdsprachigen Zeilen bitte einmal von jemandem
     # gegenlesen lassen, der die Sprache spricht.
     "irish heritage": [
-        "Slainte",
+        "Sláinte",
         "Irish by blood loud by choice",
     ],
     "italian heritage": [
@@ -88,7 +88,7 @@ NICHES = {
     ],
     "portuguese heritage": [
         "Saudade",
-        "Raised on avo's bread and long summers",
+        "Raised on avó's bread and long summers",
     ],
     "nigerian heritage": [
         "Jollof and good company",
